@@ -10,9 +10,9 @@ When you have this container running on your Azure VNet, it will forward any inc
 ```mermaid
 graph TD
     A(Client) -->|DNS Lookup vm01.cloud.mycorp.com| B(On-prem DNS Server)
-    B --> |Conditional Forwarder for cloud.mycorp.com|C(DNS Forwarder in \nAzure Container Instance)
+    B --> |Conditional Forwarder for cloud.mycorp.com|C(DNS Forwarder in Azure Container Instance)
     C -->|DNS Lookup| D(Azure Private DNS Zone)
-    E(Virtual Machine \nvm01.cloud.mycorp.com) --> |Auto-register| D
+    E(vm01.cloud.mycorp.com) --> |Auto-register| D
 ```
 
 
